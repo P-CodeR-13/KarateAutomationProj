@@ -6,5 +6,5 @@ Feature: Test Demo QA
 
     Given driver url
     * driver.maximize()
-    * delay(1000)
+    * delay(2000)
 
