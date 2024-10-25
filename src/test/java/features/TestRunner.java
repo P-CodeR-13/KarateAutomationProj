@@ -1,12 +1,12 @@
-package features.users;
+package features;
 
 import com.intuit.karate.junit5.Karate;
 
 class TestRunner {
     
     @Karate.Test
-    Karate testUsers() {
-        return Karate.run("features").relativeTo(getClass());
+    Karate testRunner() {
+        return Karate.run().tags("@TestGitHub").relativeTo(getClass());
     }    
 
 }

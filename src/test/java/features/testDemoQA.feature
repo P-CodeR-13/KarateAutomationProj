@@ -1,7 +1,8 @@
 
 Feature: Test Demo QA
 
-  Scenario: Go to TestDemoQA
+  @TestGitHub
+  Scenario: Go to TestGitHub
 
     Given driver url
     * driver.maximize()

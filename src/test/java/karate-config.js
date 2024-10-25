@@ -6,7 +6,8 @@ function fn() {
   }
   var config = {
     env: env,
-    myVarName: 'someValue'
+    myVarName: 'someValue',
+    url : 'https://github.com/'
   }
   if (env == 'dev') {
     // customize
@@ -14,5 +15,13 @@ function fn() {
   } else if (env == 'e2e') {
     // customize
   }
+
+  karate.configure('driver', { type:'chrome', headless: false, addOptions:
+  ['--enable-automation','--incognito','--remote-allow-origins-+']
+  });
+
+  karate.configure('connectTimeout', 5000);
+  karate.configure('readTimeout', 5000);
+  karate.configure('retry',{count:3,interval:5000});
   return config;
 }
